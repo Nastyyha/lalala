@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Горный бег и сборы</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --text: #2b2d42;
+            --light: #f8f9fa;
+            --gray: #adb5bd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Шапка */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo-code {
+            color: var(--accent);
+        }
+
+        /* Баннер */
+        .hero {
+            height: 60vh;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://avatars.mds.yandex.net/i?id=087e072ffef8083e7a5fbf92f1ec18c927c0db1c-10608704-images-thumbs&n=13');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Галерея */
+        .gallery {
+            padding: 60px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s;
+            }
+
+            .gallery-item:hover img {
+                transform: scale(1.1);
+            }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+        }
+
+        /* Секции */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text);
+        }
+
+        /* Карточки */
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .card-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+            .card-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        /* Тренировки */
+        .training-stats {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: var(--primary);
+        }
+
+        /* Цитата */
+        .quote-section {
+            background-color: var(--primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-author {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Футер */
+        footer {
+            background-color: var(--text);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+            .social-links a {
+                color: white;
+                font-size: 1.5rem;
+            }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <span class="logo-code">{</span>ГорныйБег<span class="logo-code">}</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__code">{</span>:)<span class="logo__code">}</span> <!-- Код, Спорт, Общага -->
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="sport.html">Спорт</a></li>
+                        <li><a href="study.html">Учеба</a></li>
+                        <li><a href="travel.html">Путешествия</a></li>
+                        <li><a href="index.html">Обо мне</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Меню">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Баннер -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Сборы. Горный бег</h1>
+            <p>На фоне фото Бештау, в которую проходили соревнования по горному бегу вверх</p>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="gallery section">
+        <div class="container">
+            <h2 class="section-title">Мои горные приключения</h2>
+            <p class="section-subtitle">Фото со сборов и соревнований</p>
+
+            <div class="gallery-grid">
+                <!-- Фото 1 -->
+                <div class="gallery-item">
+                    <img src="images/zeleznovodsk.jpg" alt="Город Железноводск">
+                    <div class="gallery-caption">Поход в Железноводске</div>
+                </div>
+
+                <!-- Фото 2 -->
+                <div class="gallery-item">
+                    <img src="images/cheburashka.jpg" alt="место съемки">
+                    <div class="gallery-caption">Место съемки фильма "Чебурашка"</div>
+                </div>
+
+                <!-- Фото 3 -->
+                <div class="gallery-item">
+                    <img src="images/lyga.jpg" alt="Луга">
+                    <div class="gallery-caption">Луга</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сборы -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Мои сборы</h2>
+            <p class="section-subtitle">Как я готовлюсь к сезону</p>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="images/sbor.jpg" alt="Сборы в Саврополе</">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Сборы в Саврополе</h3>
+                    <p>2 недели интенсивных тренировок на высоте 2000 метров. Ежедневные интервальные работы, длительные кроссы по горным тропам и силовые тренировки.</p>
+
+                    <div class="training-stats">
+                        <div class="stat">
+                            <i class="fas fa-running"></i>
+                            <span>120 км</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-mountain"></i>
+                            <span>+5000 м</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>14 дней</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="images/kontrol2.jpg" alt="контрольная тренировка">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Контрольная тренировка в центральном парке</h3>
+                    <p>Подготовка к весеннему сезону.</p>
+
+                    <div class="training-stats">
+                    
+                        <div class="stat">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Горные трассы</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>Команда из 13 человек</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Соревнования -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Мои соревнования</h2>
+            <p class="section-subtitle">Самые запоминающиеся старты</p>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="images/Mounth.jpg" alt="Чемпионат России">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Чемпионат России по горному бегу</h3>
+                    <p>Дистанция 7 километров, бег вверх.</p>
+
+                    <div class="training-stats">
+                        <div class="stat">
+                            <i class="fas fa-medal"></i>
+                            <span>9 место</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-mountain"></i>
+                            <span>1500 м набора</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span>1.01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цитата -->
+    <section class="quote-section">
+        <div class="container">
+            <blockquote class="quote">
+                спасибо за внимание))
+            </blockquote>
+            <div class="quote-author">Анастасия Фарлянских</div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Мой горный бег. Все права защищены.</p>
+            <div class="social-links">
+                <a href="https://t.me/@nastyyyha5"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

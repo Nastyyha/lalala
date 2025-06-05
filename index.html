@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Код, Спорт & Общага | Блог студентки-спортсменки</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__code">{</span>:)<span class="logo__code">}</span> <!-- Код, Спорт, Общага -->
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="sport.html">Спорт</a></li>
+                        <li><a href="study.html">Учеба</a></li>
+                        <li><a href="travel.html">Путешествия</a></li>
+                        <li><a href="#about">Обо мне</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Меню">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой-секция (приветствие) -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1>Привет,  <span class="highlight">Меня зовут Анастасия Фарлянских</span></h1>
+                <p>Занимаюсь спортом, учусь, путешествию. Здесь я хочу поделиться с вами кусочком моей жизни.</p>
+                <a href="#posts" class="btn">Жми</a>
+            </div>
+            <div class="hero__image">
+                <img src="images/me.jpg" alt="Мое фото" width="400">
+            </div>
+        </div>
+    </section>
+
+    <!-- Последние записи -->
+    <section class="posts" id="posts">
+        <div class="container">
+            <h2>Последние записи</h2>
+            <div class="posts__grid">
+                <!-- Пост 1 (Спорт) -->
+                <article class="post-card post-card--sport">
+                    <img src="images/floowers.jpg" alt="Соревнования">
+                    <div class="post-card__content">
+                        <span class="post-category">Спорт</span>
+                        <h3>Как я ездила на сборы в Кисловодск</h3>
+                        <p>Рассказываю про интенсивные тренировки, смешные моменты и как успевала учиться удалённо.</p>
+                        <a href="#" class="read-more">Читать →</a>
+                    </div>
+                </article>
+
+                <!-- Пост 2 (Код) -->
+                <article class="post-card post-card--code">
+                    <img src="images/post-code.jpg" alt="Учеба">
+                    <div class="post-card__content">
+                        <span class="post-category">Кодинг</span>
+                        <h3>О моей Профессии</h3>
+                        <p>Почему я выбрала профессию в IT и какие выводы я могу сделать за это время.</p>
+                        <a href="#" class="read-more">Читать →</a>
+                    </div>
+                </article>
+
+                <!-- Пост 3 (Общага) -->
+                <article class="post-card post-card--dorm">
+                    <img src="images/dagestan.jpg" alt="Путешествия">
+                    <div class="post-card__content">
+                        <span class="post-category">Дагестан</span>
+                        <h3>Куда сходить в Дагестане?</h3>
+                        <p>Где самая вкусная еда?</p>
+                        <a href="#" class="read-more">Читать →</a>
+                    </div>
+                </article>
+            </div>
+            <a href="#" class="btn btn--outline">Все записи</a>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__image">
+                    <img src="images/whoi.jpg" alt="Моё фото" width="300">
+                </div>
+                <div class="about__content">
+                    <h2>Кто я?</h2>
+                    <p>Меня зовут Анастасия Фарлянских и в этом блоге я хочу поделится с вами своим опытом.</p>
+                    <div class="about__stats">
+                        <div class="stat">
+                            <span class="stat__number">10+</span>
+                            <span class="stat__label">соревнований</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">1000+</span>
+                            <span class="stat__label">строк кода</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">24/7</span>
+                            <span class="stat__label">в общаге</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__code">{</span>:)<span class="logo__code">}</span>
+                    </a>
+                    <p>Блог о жизни.</p>
+                </div>
+                <div class="footer__col">
+                    <h3>Разделы</h3>
+                    <ul>
+                        <li><a href="sport.html">Спорт</a></li>
+                        <li><a href="study.html">Кодинг</a></li>
+                        <li><a href="travel.html">путешествия</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3>Соцсети</h3>
+                    <ul class="social-links">
+                        <li><a href="https://vk.com/nastyyha25" target="_blank">VK</a></li>
+                        <li><a href="https://t.me/@nastyyyha5" target="_blank">Telegram</a></li>
+                        <li><a href="https://gist.github.com/Nastyyha" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Анастасия Фарлянских. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

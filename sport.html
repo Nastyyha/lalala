@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Горный бег и сборы</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="Script.js" defer></script>
     <style>
         :root {
-            --primary: #4361ee;
-            --secondary: #3a0ca3;
-            --accent: #f72585;
-            --text: #2b2d42;
-            --light: #f8f9fa;
-            --gray: #adb5bd;
+            --primary: #FF6B8B; /* Розовый вместо синего */
+            --secondary: #FFA07A; /* Персиковый */
+            --accent: #FF1493; /* Ярко-розовый */
+            --text: #5A3E36; /* Теплый коричневый для текста */
+            --light: #FFE4E1; /* Очень светлый персиковый для фона */
+            --gray: #D8BFD8; /* Светло-фиолетовый для серых элементов */
         }
 
         * {
@@ -25,7 +26,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text);
             line-height: 1.6;
-            background-color: var(--light);
+            background-color: var(--light); /* Персиковый фон */
         }
 
         .container {
@@ -36,7 +37,7 @@
 
         /* Шапка */
         header {
-            background-color: white;
+            background-color: #FFF0F5; /* Розовато-белый */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
@@ -114,7 +115,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(255, 105, 140, 0.8); /* Полупрозрачный розовый */
             color: white;
             padding: 15px;
         }
@@ -139,10 +140,10 @@
 
         /* Карточки */
         .card {
-            background: white;
+            background: #FFF0F5; /* Розовато-белый */
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(255, 105, 140, 0.2); /* Розовая тень */
             margin-bottom: 30px;
         }
 
@@ -184,7 +185,7 @@
 
         /* Цитата */
         .quote-section {
-            background-color: var(--primary);
+            background-color: var(--primary); /* Розовый фон */
             color: white;
             padding: 80px 0;
             text-align: center;
@@ -204,7 +205,7 @@
 
         /* Футер */
         footer {
-            background-color: var(--text);
+            background-color: var(--text); /* Теплый коричневый */
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -331,7 +332,7 @@
                     <p>Подготовка к весеннему сезону.</p>
 
                     <div class="training-stats">
-                    
+
                         <div class="stat">
                             <i class="fas fa-snowflake"></i>
                             <span>Горные трассы</span>
